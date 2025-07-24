@@ -1,8 +1,9 @@
+### This script filters only the white color from an RGB image.
 import cv2
 import numpy as np
 
 # Load the image
-image = cv2.imread('image4.png')
+image = cv2.imread('path from your image')
 
 # Convert to HSV color space
 hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
@@ -11,10 +12,6 @@ hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 # Adjust these values based on the specific shades of white in your image
 lower_white = np.array([0, 0, 200])  # Example: low saturation, high value
 upper_white = np.array([255, 25, 255]) # Example: low saturation, high value
-
-# New white
-#lower_white = np.array([0, 0, 212])
-#upper_white = np.array([131, 255, 255])
 
 # Create a mask for the white regions
 mask = cv2.inRange(hsv_image, lower_white, upper_white)
@@ -43,7 +40,7 @@ while True:
     ###cv2.imshow('Original Image', image)
     ###cv2.imshow('Final Image', final_image)
     cv2.imshow('Mask White', mask)
-    cv2.imwrite('white4.png', mask)
+    cv2.imwrite('white.png', mask)
 
     key = cv2.waitKey(1) & 0xFF
     if key == ord("q"):
