@@ -1,4 +1,4 @@
-### This script filters only the blue color from an RGB image
+### This script filters only the blue color from an RGB image.
 import numpy as np
 import cv2
 
