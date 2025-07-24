@@ -1,3 +1,5 @@
+### detect-and-visualize-differences-between-two-images-with-opencv-python
+### second example
 from skimage.metrics import structural_similarity as ssim
 import imutils
 import cv2
