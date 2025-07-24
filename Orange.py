@@ -1,3 +1,4 @@
+### This script filters only the orange color from an RGB image
 import numpy as np
 import cv2
 
