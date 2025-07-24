@@ -1,11 +1,11 @@
-### https://stackoverflow.com/questions/56183201/detect-and-visualize-differences-between-two-images-with-opencv-python
+### detect-and-visualize-differences-between-two-images-with-opencv-python
 from skimage.metrics import structural_similarity as ssim
 import cv2
 import numpy as np
 
 # Load images
-before = cv2.imread('orange1.png')
-after = cv2.imread('orange2.png')
+before = cv2.imread('path from your imageA')
+after = cv2.imread('path from your imageB')
 
 # Convert images to grayscale
 before_gray = cv2.cvtColor(before, cv2.COLOR_BGR2GRAY)
@@ -52,7 +52,7 @@ while True:
     ###cv2.imshow('mask', mask)
     ###cv2.imshow('filled after', filled_after)
     ###cv2.imshow("Thresholded Difference", thresh)
-    cv2.imwrite('diff.png', diff_box)
+    ###cv2.imwrite('diff.png', diff_box)
     ###cv2.imwrite('after.png', after)
 
     key = cv2.waitKey(1) & 0xFF
