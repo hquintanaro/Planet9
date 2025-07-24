@@ -1,11 +1,9 @@
-### https://www.analytics-link.com/post/2018/12/07/solving-a-fiendishly-hard-spot-the-difference-puzzle-in-python
-###from skimage.measure import compare_ssim
 from skimage.metrics import structural_similarity as ssim
 import imutils
 import cv2
 
-imageA = cv2.imread("image3.png")
-imageB = cv2.imread("image4.png")
+imageA = cv2.imread("image_example1")
+imageB = cv2.imread("image_example2")
 
 grayA = cv2.cvtColor(imageA, cv2.COLOR_BGR2GRAY)
 grayB = cv2.cvtColor(imageB, cv2.COLOR_BGR2GRAY)
