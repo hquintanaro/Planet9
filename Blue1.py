@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
  
 ###cap = cv.VideoCapture(0)
-frame = cv.imread('nice.jpeg')
+frame = cv.imread('your image')
 
 while(1):
  
