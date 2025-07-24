@@ -16,7 +16,7 @@ upper = np.array([140, 255, 255])
 mask = cv2.inRange(hsv, lower, upper)
 result = cv2.bitwise_and(image, image, mask=mask)
 
-while(1):
+while True:
 
     cv2.imshow('result', result)
     cv2.imwrite('blue.png', result)
